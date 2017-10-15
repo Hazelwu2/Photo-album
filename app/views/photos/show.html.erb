@@ -1,0 +1,11 @@
+<div class="container">
+
+  <h1>標題：<%= @photo.title %></h1>
+  <br>
+  日期：<%= @photo.date %>
+  <br>
+  <%= image_tag @photo.file_location.url, size: "140x140", class: "img-thumbnail" %>
+  <h3>相片描述：<%= simple_format(@photo.description) %></h3>
+
+  <%= link_to '回上一頁', photos_path, class: 'btn btn-primary' %>
+</div>
