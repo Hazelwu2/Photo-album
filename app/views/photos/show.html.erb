@@ -13,11 +13,11 @@
                </div>
                <div class="col-sm-6">
                  <div class="img-description">
-                  <p><%= simple_format(@photo.description) %></p>
+                  <p> <%= format(@photo.description) %></p>
                  </div>
                </div>
             </div>
-         <%= link_to '回上一頁', photos_path, class: 'button fixed' %>
+         <%= link_to '回上一頁', photos_path, class: 'button' %>
          </div>
 
        </div>
