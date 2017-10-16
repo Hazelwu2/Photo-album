@@ -1,0 +1,120 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+
+@import 'bootstrap-sprockets'
+@import 'bootstrap'
+
+// ---Varible Setting--- //
+
+$link-color: #7E7E7E
+$boder-color: #e4e4e4
+$title-color: #50A7C7
+$photo-bg: #F8F9FA
+$hover-color: #50A7C7
+$btn: #969696
+// ---Base Setting--- //
+
+a
+  transition: all .3s
+  color: $link-color
+  &:hover
+    text-decoration: none
+    color: $hover-color
+
+h1,h2,h3,h4
+  color: $title-color
+p
+  color: $link-color
+
+
+  // ---header setting ---//
+
+.nav
+  padding-top: 10px
+  border-bottom: 1px solid #f1f1f1
+  opacity: 0.8
+  background: #fff
+  #logo
+    width: 20%
+  .ftn
+    padding: 10px
+    margin-bottom: 10px
+    border: 1px solid $boder-color
+    border-radius: 5px
+
+  // ---Photo Setting ---//
+
+section
+  .introduce
+    margin-bottom: 3em
+    line-height: 1
+  p
+    letter-spacing: 1px
+    font-weight: 200
+    color: #9B9B9B
+    font-size: 1.25rem
+  h1
+    font-size: 22px
+    letter-spacing: 2px
+    font-weight: 400
+
+.photo
+  @extend .text-center
+  margin: 1rem 1.5%
+  background: $photo-bg
+  border: 1px solid $boder-color
+  border-radius: .3rem
+  a
+    display: inline-block
+    &:hover
+      opacity: 0.7
+  h2
+    margin: 0
+    padding: 1rem 5%
+    border-bottom: 1px solid $boder-color
+    font-size: 1.5rem
+    color: $title-color
+  p
+    padding: .75rem 5%
+  .photo-img
+    height: 200px
+    overflow: hidden
+    img
+      border-radius: .3rem .3rem 0 0
+  .links
+    @extend .text-center
+    font-size: 1rem
+
+.new-photo
+  margin: 3em
+
+#show-album
+  padding-top: 2rem
+  .img-description
+    p
+      padding: 1em
+  .button
+    @extend .text-left
+    display: block
+    padding: .75rem 0px
+    margin-top: 2em
+    margin-bottom: 1rem
+    width: 50%
+    text-align: center
+    transition: all .4s
+    color: $btn
+    &:hover
+      color: $hover-color
+      border: 1px solid $hover-color
+

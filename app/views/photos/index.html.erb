@@ -1,16 +1,30 @@
 <div class="container">
-  <table class="table table-striped table-condensed">
-   <% @photos.each do |photo| %>
-    <tr>
-      <td><%= photo.title %></td>
-      <td><%= link_to 'Show', photo_path(photo) %></td>
-      <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
-      <td><%= link_to 'Destroy', photo_path(photo), method: :delete, data:{ confirm: "你確定要刪除嗎?" } %></td>
-    </tr>
-    <% end %>
-  </table>
-
-  <%= link_to '新增相片', new_photo_path, class: 'btn btn-primary' %>
-
+  <div class="row">
+      <section class="photo-album">
+        <div class="introduce text-center col-sm-12">
+          <h1>相簿</h1>
+          <p>把經典回憶留在這邊吧，紀錄當下的精彩片刻</p>
+        </div>
+        
+        <% @photos.each do |photo| %>
+          <div class="col-sm-4">
+            <div class="photo">
+              <%= link_to photo_path(photo) do %>
+                <div class="photo-img">
+                  <%= image_tag photo.file_location_url, class: 'img-responsive' %>
+                </div>
+                <h2><%= photo.title %></h2>
+                <p><%= photo.description %></p>
+                <p><%= photo.date %></p>
+            <% end %>
+            <div class="links">
+              <%= link_to "編輯", edit_photo_path(photo) %>
+              <%= link_to "刪除", photo_path(photo), method: :delete, data: {confirm: "你確定要刪除嗎？"} %>
+            </div>
+          </div>
+          </div>
+        <% end %>
+      </section>
+  </div>
 
 </div>

@@ -9,6 +9,25 @@
   </head>
 
   <body>
+  <header>
+    <div class="nav">
+      <div class="container">
+        <div class="row">
+          <div id="logo" class="pull-left">
+            <%= link_to root_url do %>
+            <%= image_tag ('hazel-logo.jpg'), class: 'img-responsive' %>
+            <% end %>
+          </div>
+          <div class="ftn pull-right">
+            <%= link_to '新增相片', new_photo_path, class: 'add-photo' %>
+          </div>
+
+        </div>
+        
+      </div>
+
+    </div>
+  </header>
     <%= yield %>
   </body>
 </html>

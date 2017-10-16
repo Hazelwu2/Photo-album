@@ -1,11 +1,27 @@
-<div class="container">
+ <section id="show-album">
+   <div class="container">
+       <div class="row">
+         <div class="col-sm-12">
+            <div class="introduce">
+              <h1><%= @photo.title %></h1>
+              
+              <p>Update <%= time_ago_in_words(@photo.created_at) %></p>
+            </div>
+            <div class="show row">
+               <div class="col-sm-6">
+                 <%= image_tag @photo.file_location.url, class: 'img-responsive' %>
+               </div>
+               <div class="col-sm-6">
+                 <div class="img-description">
+                  <p><%= simple_format(@photo.description) %></p>
+                 </div>
+               </div>
+            </div>
+         <%= link_to '回上一頁', photos_path, class: 'button fixed' %>
+         </div>
 
-  <h1>標題：<%= @photo.title %></h1>
-  <br>
-  日期：<%= @photo.date %>
-  <br>
-  <%= image_tag @photo.file_location.url, size: "140x140", class: "img-thumbnail" %>
-  <h3>相片描述：<%= simple_format(@photo.description) %></h3>
+       </div>
+   </div>
+</section>
+    
 
-  <%= link_to '回上一頁', photos_path, class: 'btn btn-primary' %>
-</div>
