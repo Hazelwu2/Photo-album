@@ -16,6 +16,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'carrierwave'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'mini_magick'
+gem "fog-aws"
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
