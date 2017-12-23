@@ -17,6 +17,7 @@ gem 'carrierwave'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'mini_magick'
 gem "fog-aws"
+gem 'fog'
 
 
 group :development, :test do
